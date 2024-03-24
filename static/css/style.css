@@ -1,0 +1,27 @@
+html {
+  font-family: Garamond, cursive;
+  background-color: gold;
+}
+
+h1 {
+  color: pink;
+  background-color: lime;
+  width: 100%
+}
+
+h2 {
+  color: white;
+  background-color: black;
+  font-weight: 600;
+  width: 100%;
+}
+
+h2 a {
+  color: pink;
+}
+
+h3 {
+  color: darkgreen;
+  font-weight: 200;
+  font-size: 20px;
+}

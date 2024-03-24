@@ -1,0 +1,36 @@
+<!-- This is the master document which has the
+     main layout, but also where any scripts, css
+     etc also get added -->
+
+<!doctype html>
+<html>
+  <head>
+    <!-- '{{ page_title }}' gets replaced with the
+    content of the page_title variable which is
+    passed to the template by 'render_template'.
+    See the return statement for the home function
+    in routes.py for how that variable is passed.
+    -->
+    <title>No Chips Left Pizza - {{ page_title }}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+  </head>
+
+  <body>
+  <!-- {% include 'header.html' %} gets the
+  contents of 'header.html' and replaces the
+  include statement with them.  This allows you
+  to break up the page into sensible chunks -->
+  {% include 'header.html' %}
+
+  {% include 'nav.html' %}
+
+  <!-- a 'block' can be added to (extended) from
+  other places - this will allow us to change the
+  main content of the page while keeping the
+  header, nav and footer constant.  See home.html
+  for an example of how to extend this block -->
+  {% block content %}{% endblock %}
+
+  {% include 'footer.html' %}
+  </body>
+</html>

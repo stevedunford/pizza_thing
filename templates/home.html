@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+<!-- When render_template calls 'home.html', the
+'extends' command tells Jinja2 (the template engine)
+that this is just a part of 'layout.html' and it
+needs to load that file too (and in turn, all the
+files that layout 'includes'). The code inside
+'block content' below is inserted into the block
+content section in layout.html and it is shown
+in the browser, all as if it was just one html
+file. -->
+
+{% block content %}
+  <h3>
+    Welcome to 'No Chips Left' Pizza
+  </h3>
+  <p>
+    Lorum ipsum blah blah blah...
+  </p>
+{% endblock %}
